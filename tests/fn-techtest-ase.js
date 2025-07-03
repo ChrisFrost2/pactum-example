@@ -45,7 +45,7 @@ describe('hooks', function () {
       .expectBody("");
   });
 
-  it('should return empty list for unknown exchange symbol', async () => {
+  it('should return empty list for empty exchange symbol', async () => {
     const resp = await spec()
       .get('/exchanges//companies')
       .withQueryParams('code', process.env.API_KEY)
